@@ -112,13 +112,14 @@ class _MyHomePageState extends State<MyHomePage>
             ),
             _buildButton(
               const future_trends(),
-              Icons.document_scanner_rounded,
+              // Icons.document_scanner_rounded,
+              Icons.account_tree_rounded,
               "Future Trends",
               buttonSize,
             ),
             _buildButton(
               const GetJobReady(),
-              Icons.document_scanner_rounded,
+              Icons.add_chart,
               "Get Job Ready",
               buttonSize,
             ),
