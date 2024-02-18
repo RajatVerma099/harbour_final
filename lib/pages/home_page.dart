@@ -111,10 +111,10 @@ class _MyHomePageState extends State<MyHomePage>
               buttonSize,
             ),
             _buildButton(
-              const future_trends(),
+              const CodeNScope(),
               // Icons.document_scanner_rounded,
               Icons.account_tree_rounded,
-              "Future Trends",
+              "Code N Scope",
               buttonSize,
             ),
             _buildButton(
