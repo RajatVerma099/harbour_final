@@ -232,7 +232,7 @@ class PageIndicator extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 4.0),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: currentIndex == index ? Colors.purpleAccent : Colors.grey.withOpacity(0.4),
+            color: currentIndex == index ? Colors.deepPurple : Colors.grey.withOpacity(0.4),
           ),
         ),
       ),
@@ -320,29 +320,32 @@ final List<Technology> technologies = [
 final List<CodingWebsite> codingWebsites = [
   CodingWebsite(
     websiteName: 'LeetCode',
-    imageUrl: 'https://drive.google.com/file/d/1B6WI9nhDJ6-LicqMAvXwWRqjse_JtC1_/view?usp=drive_link',//'assets/coding_platform/leetcode.jpg',//'https://drive.google.com/uc?export=download&id=1aBQvJXymKtLPxgOzC57a_6ZT6Rj--I1X',
+    imageUrl: //'https://drive.google.com/file/d/1B6WI9nhDJ6-LicqMAvXwWRqjse_JtC1_/view?usp=drive_link'
+        'https://drive.google.com/uc?export=download&id=1B6WI9nhDJ6-LicqMAvXwWRqjse_JtC1_',//'assets/coding_platform/leetcode.jpg',//'https://drive.google.com/uc?export=download&id=1aBQvJXymKtLPxgOzC57a_6ZT6Rj--I1X',
     websiteUrl: 'https://leetcode.com/',
   ),
   CodingWebsite(
     websiteName: 'GeeksforGeeks',
-    // imageUrl: 'assets/coding_platform/gfg.jpg',
-    imageUrl: 'https://drive.google.com/file/d/1UWLEbclmQaOQ7pvfvVSIMSV5v11PfkDm/view?usp=drive_link',//'https://drive.google.com/uc?export=download&id=1CDQ1lq1NE6z7q5XL6eE5L-HUBRM2qCXz',
+    imageUrl:// 'https://drive.google.com/file/d/1UWLEbclmQaOQ7pvfvVSIMSV5v11PfkDm/view?usp=drive_link'
+    'https://drive.google.com/uc?export=download&id=1UWLEbclmQaOQ7pvfvVSIMSV5v11PfkDm',//'https://drive.google.com/uc?export=download&id=1CDQ1lq1NE6z7q5XL6eE5L-HUBRM2qCXz',
     websiteUrl: 'https://www.geeksforgeeks.org/',
   ),
   CodingWebsite(
     websiteName: 'Codechef',
-    imageUrl: 'https://drive.google.com/file/d/1bRTUctjx9e_eZ9oLtSOVdglGEIU8SkiX/view?usp=drive_link',//'assets/coding_platform/codechef.jpg',//'https://drive.google.com/uc?export=download&id=1C0C6PQl3QnWwHhF2XzZQZ3jqkTrNN0OM',
+    imageUrl: //'https://drive.google.com/file/d/1bRTUctjx9e_eZ9oLtSOVdglGEIU8SkiX/view?usp=drive_link'
+        'https://drive.google.com/uc?export=download&id=1bRTUctjx9e_eZ9oLtSOVdglGEIU8SkiX',//'assets/coding_platform/codechef.jpg',//'https://drive.google.com/uc?export=download&id=1C0C6PQl3QnWwHhF2XzZQZ3jqkTrNN0OM',
     websiteUrl: 'https://www.codechef.com/',
   ),
   CodingWebsite(
     websiteName: 'Hacker Rank',
-    imageUrl: 'https://drive.google.com/file/d/12GEuHzlY63kiuWP15LpGIU_O3QLPl9NR/view?usp=drive_link', //'assets/coding_platform/hackerrank.jpg',
-    // imageUrl: 'https://drive.google.com/uc?export=download&id=1CDkgKFJDoGw9R0ms5dAZCBF39zCakb8t',
+    imageUrl: //'https://drive.google.com/file/d/12GEuHzlY63kiuWP15LpGIU_O3QLPl9NR/view?usp=drive_link', //'assets/coding_platform/hackerrank.jpg',
+    'https://drive.google.com/uc?export=download&id=12GEuHzlY63kiuWP15LpGIU_O3QLPl9NR',
     websiteUrl: 'https://www.hackerrank.com/',
   ),
   CodingWebsite(
     websiteName: 'HackerEarth',
-    imageUrl: 'https://drive.google.com/file/d/1Nvlx6p2jbdzrGo2lcq7kGvctRA9mWYXz/view?usp=drive_link', //'assets/coding_platform/hackerearth.jpg',
+    imageUrl: //'https://drive.google.com/file/d/1Nvlx6p2jbdzrGo2lcq7kGvctRA9mWYXz/view?usp=drive_link'
+    'https://drive.google.com/uc?export=download&id=1Nvlx6p2jbdzrGo2lcq7kGvctRA9mWYXz', //'assets/coding_platform/hackerearth.jpg',
     websiteUrl: 'https://www.hackerearth.com/',
   ),
 ];
