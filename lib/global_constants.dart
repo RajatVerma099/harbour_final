@@ -60,17 +60,29 @@ const devs = [
 ];
 
 const resumeThumbnails = [
-    'https://drive.google.com/uc?export=view&id=1sTfin3hQVKT2WKFpSHaCznt-W-f8XGnA',
-    'https://drive.google.com/uc?export=view&id=1sU1sa4NThCu4Z6FiGKb5K7p09TYS12TW',
-    'https://drive.google.com/uc?export=view&id=1sWC99OshB4y9wpPKAzEu9UzMumjD4lnh',
-    'https://drive.google.com/uc?export=view&id=1sXBpJ1LdkgWVDSC6gS4IiJXxkgbOtLNF',
-    'https://drive.google.com/uc?export=view&id=1sYW0lpg2VTZhPEOhewPaQ2XalbLiy4lo',
-    'https://drive.google.com/uc?export=view&id=1shuH_nAqYWK3BEJVC-SlYuP1IQYE4t4U',
-    'https://drive.google.com/uc?export=view&id=1siM83IfgqvEyLCORwMHQ0-umyJaVfy29',
-    'https://drive.google.com/uc?export=view&id=1siOWo9qv4Z8uFw0el9ZIrXgFSzu_s-ms',
-    'https://drive.google.com/uc?export=view&id=1sjUGrZIgLbiOoyVruoIjFSb2JEa6OrXj',
-    'https://drive.google.com/uc?export=view&id=1slROfIV1XJU5iRrSumYVao2iwiS9c2pn',
-  ];
+  'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/resume_img%2F1_10_11zon.jpg?alt=media&token=79cbbcdb-c129-41a9-93ce-f5ef7eae8fd8',
+  'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/resume_img%2F2_9_11zon.jpg?alt=media&token=bc3a5ac5-18ce-4d36-833a-f154ba73451e',
+  'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/resume_img%2F3_8_11zon.jpg?alt=media&token=cdca102d-1c9e-4d72-a1ac-ec968f476306',
+  'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/resume_img%2F4_7_11zon.jpg?alt=media&token=b7193f7a-f0b6-43dd-ac9d-dce7dc170272',
+  'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/resume_img%2F5_6_11zon.jpg?alt=media&token=71033204-e3ed-486a-b96c-8e4294dfe431',
+  'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/resume_img%2F6_5_11zon.jpg?alt=media&token=5767acf8-84d4-4a4b-ad6e-9671e552d457',
+  'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/resume_img%2F7_4_11zon.jpg?alt=media&token=ade7c223-c1d6-425d-be6a-81cfd71982bd',
+  'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/resume_img%2F8_3_11zon.jpg?alt=media&token=8e0cb5b6-5f5c-451d-94c3-bf5db76488b1',
+  'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/resume_img%2F9_2_11zon.jpg?alt=media&token=7483bf56-911a-43c6-86f6-c61b92add31e',
+  'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/resume_img%2F10_1_11zon.jpg?alt=media&token=8eb7d121-fed8-4120-831e-a12a83b70b51',
+];
+  //old pics
+  //   'https://drive.google.com/uc?export=view&id=1sTfin3hQVKT2WKFpSHaCznt-W-f8XGnA',
+  //   'https://drive.google.com/uc?export=view&id=1sU1sa4NThCu4Z6FiGKb5K7p09TYS12TW',
+  //   'https://drive.google.com/uc?export=view&id=1sWC99OshB4y9wpPKAzEu9UzMumjD4lnh',
+  //   'https://drive.google.com/uc?export=view&id=1sXBpJ1LdkgWVDSC6gS4IiJXxkgbOtLNF',
+  //   'https://drive.google.com/uc?export=view&id=1sYW0lpg2VTZhPEOhewPaQ2XalbLiy4lo',
+  //   'https://drive.google.com/uc?export=view&id=1shuH_nAqYWK3BEJVC-SlYuP1IQYE4t4U',
+  //   'https://drive.google.com/uc?export=view&id=1siM83IfgqvEyLCORwMHQ0-umyJaVfy29',
+  //   'https://drive.google.com/uc?export=view&id=1siOWo9qv4Z8uFw0el9ZIrXgFSzu_s-ms',
+  //   'https://drive.google.com/uc?export=view&id=1sjUGrZIgLbiOoyVruoIjFSb2JEa6OrXj',
+  //   'https://drive.google.com/uc?export=view&id=1slROfIV1XJU5iRrSumYVao2iwiS9c2pn',
+  // ];
 
 const resumeLinks = [
   'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/1-Black%20White%20Minimalist%20CV%20Resume.pdf?alt=media&token=0cee7f98-2d34-4e96-885f-4ab6b4d4e65e',

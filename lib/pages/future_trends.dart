@@ -320,32 +320,34 @@ final List<Technology> technologies = [
 final List<CodingWebsite> codingWebsites = [
   CodingWebsite(
     websiteName: 'LeetCode',
-    imageUrl: //'https://drive.google.com/file/d/1B6WI9nhDJ6-LicqMAvXwWRqjse_JtC1_/view?usp=drive_link'
-        'https://drive.google.com/uc?export=download&id=1B6WI9nhDJ6-LicqMAvXwWRqjse_JtC1_',//'assets/coding_platform/leetcode.jpg',//'https://drive.google.com/uc?export=download&id=1aBQvJXymKtLPxgOzC57a_6ZT6Rj--I1X',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/coding_platforms%2Fleetcode.png?alt=media&token=684c4b7c-5fc4-495f-b298-e9d330f1f4d8',
+        // 'https://drive.google.com/uc?export=download&id=1B6WI9nhDJ6-LicqMAvXwWRqjse_JtC1_',//'assets/coding_platform/leetcode.jpg',//'https://drive.google.com/uc?export=download&id=1aBQvJXymKtLPxgOzC57a_6ZT6Rj--I1X',
     websiteUrl: 'https://leetcode.com/',
   ),
   CodingWebsite(
     websiteName: 'GeeksforGeeks',
-    imageUrl:// 'https://drive.google.com/file/d/1UWLEbclmQaOQ7pvfvVSIMSV5v11PfkDm/view?usp=drive_link'
-    'https://drive.google.com/uc?export=download&id=1UWLEbclmQaOQ7pvfvVSIMSV5v11PfkDm',//'https://drive.google.com/uc?export=download&id=1CDQ1lq1NE6z7q5XL6eE5L-HUBRM2qCXz',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/coding_platforms%2Fgfg.jpg?alt=media&token=4653a339-5f32-4ac7-89e3-b6dc549f1faf',
+    // 'https://drive.google.com/uc?export=download&id=1UWLEbclmQaOQ7pvfvVSIMSV5v11PfkDm',//'https://drive.google.com/uc?export=download&id=1CDQ1lq1NE6z7q5XL6eE5L-HUBRM2qCXz',
     websiteUrl: 'https://www.geeksforgeeks.org/',
   ),
   CodingWebsite(
     websiteName: 'Codechef',
-    imageUrl: //'https://drive.google.com/file/d/1bRTUctjx9e_eZ9oLtSOVdglGEIU8SkiX/view?usp=drive_link'
-        'https://drive.google.com/uc?export=download&id=1bRTUctjx9e_eZ9oLtSOVdglGEIU8SkiX',//'assets/coding_platform/codechef.jpg',//'https://drive.google.com/uc?export=download&id=1C0C6PQl3QnWwHhF2XzZQZ3jqkTrNN0OM',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/coding_platforms%2Fcodechef.png?alt=media&token=8644d45b-eaba-4113-9ff9-8613a6f298c5',
+    //'https://drive.google.com/file/d/1bRTUctjx9e_eZ9oLtSOVdglGEIU8SkiX/view?usp=drive_link'
+        // 'https://drive.google.com/uc?export=download&id=1bRTUctjx9e_eZ9oLtSOVdglGEIU8SkiX',//'assets/coding_platform/codechef.jpg',//'https://drive.google.com/uc?export=download&id=1C0C6PQl3QnWwHhF2XzZQZ3jqkTrNN0OM',
+
     websiteUrl: 'https://www.codechef.com/',
   ),
   CodingWebsite(
     websiteName: 'Hacker Rank',
-    imageUrl: //'https://drive.google.com/file/d/12GEuHzlY63kiuWP15LpGIU_O3QLPl9NR/view?usp=drive_link', //'assets/coding_platform/hackerrank.jpg',
-    'https://drive.google.com/uc?export=download&id=12GEuHzlY63kiuWP15LpGIU_O3QLPl9NR',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/coding_platforms%2Fhackerrank.png?alt=media&token=67a08988-ba65-48f5-aac1-6eee7ddbd113',
+    // 'https://drive.google.com/uc?export=download&id=12GEuHzlY63kiuWP15LpGIU_O3QLPl9NR',
     websiteUrl: 'https://www.hackerrank.com/',
   ),
   CodingWebsite(
     websiteName: 'HackerEarth',
-    imageUrl: //'https://drive.google.com/file/d/1Nvlx6p2jbdzrGo2lcq7kGvctRA9mWYXz/view?usp=drive_link'
-    'https://drive.google.com/uc?export=download&id=1Nvlx6p2jbdzrGo2lcq7kGvctRA9mWYXz', //'assets/coding_platform/hackerearth.jpg',
+    imageUrl: 'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/coding_platforms%2Fhackerearth.png?alt=media&token=8a674a66-feac-4c58-ac9f-502f01483b6a',
+    // 'https://drive.google.com/uc?export=download&id=1Nvlx6p2jbdzrGo2lcq7kGvctRA9mWYXz', //'assets/coding_platform/hackerearth.jpg',
     websiteUrl: 'https://www.hackerearth.com/',
   ),
 ];
