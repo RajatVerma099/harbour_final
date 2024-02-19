@@ -1,8 +1,6 @@
-
-
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 
 import '../../../../global/common/toast.dart';
 import '../../firebase_auth_implementation/firebase_auth_services.dart';
@@ -38,7 +36,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text("SignUp"),
+        title: Text("SignUp"),
       ),
       body: Center(
         child: Padding(
@@ -46,11 +44,11 @@ class _SignUpPageState extends State<SignUpPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
+              Text(
                 "Sign Up",
                 style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 30,
               ),
               FormContainerWidget(
@@ -58,7 +56,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: "Username",
                 isPasswordField: false,
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
               FormContainerWidget(
@@ -66,7 +64,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: "Email",
                 isPasswordField: false,
               ),
-              const SizedBox(
+              SizedBox(
                 height: 10,
               ),
               FormContainerWidget(
@@ -74,7 +72,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintText: "Password",
                 isPasswordField: true,
               ),
-              const SizedBox(
+              SizedBox(
                 height: 30,
               ),
               GestureDetector(
@@ -90,21 +88,21 @@ class _SignUpPageState extends State<SignUpPage> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
-                      child: isSigningUp ? const CircularProgressIndicator(color: Colors.white,):const Text(
+                      child: isSigningUp ? CircularProgressIndicator(color: Colors.white,):Text(
                     "Sign Up",
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   )),
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text("Already have an account?"),
-                  const SizedBox(
+                  Text("Already have an account?"),
+                  SizedBox(
                     width: 5,
                   ),
                   GestureDetector(
@@ -112,10 +110,10 @@ class _SignUpPageState extends State<SignUpPage> {
                         Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const LoginPage()),
+                                builder: (context) => LoginPage()),
                             (route) => false);
                       },
-                      child: const Text(
+                      child: Text(
                         "Login",
                         style: TextStyle(
                             color: Colors.blue, fontWeight: FontWeight.bold),
