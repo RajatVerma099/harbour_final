@@ -200,32 +200,46 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: Text('Get Job Ready', style: TextStyle(fontSize: 20)),
         centerTitle: true,
       ),
-      body: Container(
-        color: Colors.grey[500],
-        child: CarouselSlider.builder(
-          itemCount: mainTitles.length,
-          options: CarouselOptions(
-            height: MediaQuery.of(context).size.height,
-            aspectRatio: 16 / 9,
-            viewportFraction: 0.5,
-            enlargeCenterPage: true,
-            enableInfiniteScroll: false,
-            scrollDirection: Axis.vertical,
+      body: Stack(
+        children: [
+          // Background image
+          Positioned.fill(
+            child: Image.asset(
+              'assets/img/job_ready_bg.jpg',
+              fit: BoxFit.cover,
+            ),
           ),
-          itemBuilder: (BuildContext context, int index, int realIndex) {
-            return VerticalCarousel(
-              mainTitle: mainTitles[index],
-              videoData: videoData[index],
-            );
-          },
-        ),
+          // Your existing Container with the CarouselSlider
+          Container(
+            color: Colors.transparent, // Make container transparent
+            child: CarouselSlider.builder(
+              itemCount: mainTitles.length,
+              options: CarouselOptions(
+                height: MediaQuery.of(context).size.height,
+                aspectRatio: 16 / 9,
+                viewportFraction: 0.5,
+                enlargeCenterPage: true,
+                enableInfiniteScroll: false,
+                scrollDirection: Axis.vertical,
+              ),
+              itemBuilder: (BuildContext context, int index, int realIndex) {
+                return VerticalCarousel(
+                  mainTitle: mainTitles[index],
+                  videoData: videoData[index],
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
 }
+
 
 class VerticalCarousel extends StatelessWidget {
   final String mainTitle;

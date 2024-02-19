@@ -179,23 +179,28 @@ class Technology {
 final List<Technology> technologies = [
   Technology(
     technologyName: 'Flutter',
-    imageUrl:    'https://drive.google.com/uc?export=download&id=1tilULEXyVwNedELNFOzTNck3lgTRH7GJ',
+    imageUrl:'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/tech_used%2FFlutter.jpg?alt=media&token=d5c09ce0-1e10-4f3c-8455-f38e53ee6eb4',
+    // 'https://drive.google.com/uc?export=download&id=1tilULEXyVwNedELNFOzTNck3lgTRH7GJ',
   ),
   Technology(
     technologyName: 'Dart',
-    imageUrl:    'https://drive.google.com/uc?export=download&id=1tgRuk96qFAmZr4IJ-QgVNExzXjVS9dV_',
+    // imageUrl:    'https://drive.google.com/uc?export=download&id=1tgRuk96qFAmZr4IJ-QgVNExzXjVS9dV_',
+    imageUrl:'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/tech_used%2Fdart.jpg?alt=media&token=a2da5fe9-5461-4a37-b125-9453f781aec1',
   ),
   Technology(
     technologyName: 'Firebase',
-    imageUrl:    'https://drive.google.com/uc?export=download&id=1tf3d2aHM5xM8_wMfG2z6S958COFVhvAu',
+    // imageUrl:    'https://drive.google.com/uc?export=download&id=1tf3d2aHM5xM8_wMfG2z6S958COFVhvAu',
+    imageUrl:'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/tech_used%2Ff_auth.jpg?alt=media&token=0405bbad-b76b-4ac3-b1ce-9475cd68567a',
   ),
   Technology(
     technologyName: 'Cloud Firestore',
-    imageUrl:    'https://drive.google.com/uc?export=download&id=1tf27Z9O52A51IIvlqZ8Z5-bbxXaxgcRt',
+    // imageUrl:    'https://drive.google.com/uc?export=download&id=1tf27Z9O52A51IIvlqZ8Z5-bbxXaxgcRt',
+    imageUrl:'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/tech_used%2Ff_cloud.jpg?alt=media&token=a6c5741f-fbfb-4703-a1a9-7e3b465ccece',
   ),
   Technology(
     technologyName: 'One Signal',
-    imageUrl:    'https://drive.google.com/uc?export=download&id=1tg8co2V4gni9HGB9DHR4F_-Qp6Plkgg8',
+    // imageUrl:    'https://drive.google.com/uc?export=download&id=1tg8co2V4gni9HGB9DHR4F_-Qp6Plkgg8',
+    imageUrl:'https://firebasestorage.googleapis.com/v0/b/harbour-39025.appspot.com/o/tech_used%2Fonesignal.jpg?alt=media&token=ab6a0adb-8ae2-4bcd-9517-f0a6c84081ed',
   ),
 ];
 
