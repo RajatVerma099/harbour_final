@@ -33,7 +33,19 @@ class _TechnologiesPageState extends State<TechnologiesPage> {
       appBar: AppBar(
         title: const Text('Technologies Used'),
       ),
-      body: Center(
+      body: Stack(
+        children: [
+          // Background image
+          Positioned.fill(
+            child: Image.asset(
+              'assets/img/job_ready_bg.jpg',
+              fit: BoxFit.cover,
+            ),
+          ),
+          // Your existing Container with the CarouselSlider
+          Container(
+            color: Colors.transparent, // Make container transparent
+
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -49,6 +61,8 @@ class _TechnologiesPageState extends State<TechnologiesPage> {
           ],
         ),
       ),
+        ]
+    ),
     );
   }
 }

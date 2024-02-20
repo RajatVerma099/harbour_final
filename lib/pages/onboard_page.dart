@@ -183,12 +183,26 @@ class _OnBoardState extends State<OnBoard> {
           },
         ),
       ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          buildPrevButton(),
-          buildNextButton(),
-        ],
+      // floatingActionButton: Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //   children: [
+      //     buildPrevButton(),
+      //     buildNextButton(),
+      //   ],
+      // ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Container(
+        alignment: Alignment.bottomCenter,
+        padding: const EdgeInsets.only(bottom: 20.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            buildPrevButton(),
+            const SizedBox(
+                width: 120), // Adjust spacing between buttons if needed
+            buildNextButton(),
+          ],
+        ),
       ),
     );
   }

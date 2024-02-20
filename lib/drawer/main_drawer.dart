@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:harbour/tools/link_tools.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:harbour/tools/navigation.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -202,13 +201,28 @@ class MainDrawer extends StatelessWidget {
   Widget checkForUpdatesButton(BuildContext context) {
     const updatesUrl = 'https://rajatverma099.github.io/harbour_website/';
 
-    return Container(
+    // return Container(
+    //   width: double.infinity,
+    //   margin: const EdgeInsets.symmetric(horizontal: 10),
+    //   child: ElevatedButton(
+    //     onPressed: () async {
+    //       if (await canLaunchUrl(Uri(path: updatesUrl))) {
+    //         await launchURL(updatesUrl);
+    //       } else {
+    //         ScaffoldMessenger.of(context).showSnackBar(
+    //           const SnackBar(
+    //             content: Text('Could not launch the updates URL.'),
+    //           ),
+    //         );
+    //       }
+    //     },
+     return Container(
       width: double.infinity,
       margin: const EdgeInsets.symmetric(horizontal: 10),
       child: ElevatedButton(
         onPressed: () async {
-          if (await canLaunchUrl(Uri(path: updatesUrl))) {
-            await launchURL(updatesUrl);
+          if (await canLaunchUrlString(updatesUrl)) {
+            await launchUrlString(updatesUrl);
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
@@ -217,6 +231,8 @@ class MainDrawer extends StatelessWidget {
             );
           }
         },
+
+        
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.grey[900],
         ),
