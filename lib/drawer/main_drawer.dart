@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:harbour/tools/navigation.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import '../pages/technologies_page.dart';
