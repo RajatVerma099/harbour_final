@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class WebsitePage extends StatelessWidget {
   final List<String> websiteNames = [
@@ -41,6 +41,8 @@ class WebsitePage extends StatelessWidget {
     {'name': 'Icon10', 'path': 'assets/icons/resumemaker.png'},
     // Add paths for other icons
   ];
+
+   WebsitePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +91,7 @@ class WebsitePage extends StatelessWidget {
   }
 
   _launchWebsite(String url) async {
-    await launch(url);
+    await launchUrlString(url);
   }
 }
 

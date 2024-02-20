@@ -2,8 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class JobModal extends StatefulWidget {
+  const JobModal({super.key});
+
   @override
-  _JobModalState createState() => _JobModalState();
+  State<JobModal> createState() => _JobModalState();
 }
 
 class _JobModalState extends State<JobModal> {
@@ -87,7 +89,7 @@ class _JobModalState extends State<JobModal> {
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();
                       // Handle the form data, for example, send it to a server
-                      print('Form data: $formData');
+                      // print('Form data: $formData');
                       addDataToFirebase();
                       Navigator.pop(context);
                     }

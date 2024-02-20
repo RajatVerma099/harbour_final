@@ -1,13 +1,14 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -17,10 +18,10 @@ class MyApp extends StatelessWidget {
 }
 
 class TechnologiesPage extends StatefulWidget {
-  const TechnologiesPage({Key? key}) : super(key: key);
+  const TechnologiesPage({super.key});
 
   @override
-  _TechnologiesPageState createState() => _TechnologiesPageState();
+  State<TechnologiesPage> createState() => _TechnologiesPageState();
 }
 
 class _TechnologiesPageState extends State<TechnologiesPage> {
@@ -55,11 +56,10 @@ class _TechnologiesPageState extends State<TechnologiesPage> {
 class TechnologiesList extends StatefulWidget {
   final ValueChanged<int> onIndexChanged;
 
-  const TechnologiesList({Key? key, required this.onIndexChanged})
-      : super(key: key);
+  const TechnologiesList({super.key, required this.onIndexChanged});
 
   @override
-  _TechnologiesListState createState() => _TechnologiesListState();
+  State<TechnologiesList> createState() => _TechnologiesListState();
 }
 
 class _TechnologiesListState extends State<TechnologiesList> {
@@ -92,7 +92,7 @@ class _TechnologiesListState extends State<TechnologiesList> {
 class TechnologyCard extends StatelessWidget {
   final Technology technology;
 
-  const TechnologyCard({
+  const TechnologyCard({super.key, 
     required this.technology,
   });
 
@@ -115,7 +115,7 @@ class TechnologyCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.7,
               height: MediaQuery.of(context).size.height * 0.1,
               child: Image.network(
@@ -142,7 +142,7 @@ class TechnologyCard extends StatelessWidget {
 class PageIndicator extends StatelessWidget {
   final int currentIndex;
 
-  const PageIndicator({required this.currentIndex});
+  const PageIndicator({super.key, required this.currentIndex});
 
   @override
   Widget build(BuildContext context) {

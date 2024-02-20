@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class BuyUsACoffee extends StatelessWidget {
-  const BuyUsACoffee({Key? key}) : super(key: key);
+  const BuyUsACoffee({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +76,7 @@ class BuyUsACoffee extends StatelessWidget {
                       padding: const EdgeInsets.all(8),
                       child: InkWell(
                         onTap: () {
-                          launch('https://www.buymeacoffee.com/rv5393982t');
+                          launchUrlString('https://www.buymeacoffee.com/rv5393982t');
                         },
                         child: const Text(
                           'Donate',

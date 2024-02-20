@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../modal_sheets/show_job_details_model.dart';
 
 class ShowData extends StatefulWidget {
-  const ShowData({Key? key}) : super(key: key);
+  const ShowData({super.key});
 
   @override
   State<ShowData> createState() => _ShowDataState();
@@ -51,7 +51,7 @@ class _ShowDataState extends State<ShowData> {
   }
 
   void filterJobs(String location) {
-    print('Filtering jobs for location: $location');
+    // print('Filtering jobs for location: $location');
     location = location.trim();
     setState(() {
       _jobsStream = FirebaseFirestore.instance
@@ -90,7 +90,7 @@ class _ShowDataState extends State<ShowData> {
         child: Column(
           children: [
             AnimatedContainer(
-              duration: Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 300),
               height: _isFilterExpanded ? 100 : 0,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -128,7 +128,7 @@ class _ShowDataState extends State<ShowData> {
                           ));
                         }
                       },
-                      child: Text('Search'),
+                      child: const Text('Search'),
                     ),
                   ],
                 ),

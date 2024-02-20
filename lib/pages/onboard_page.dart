@@ -6,11 +6,12 @@ import 'package:harbour/tools/navigation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../global_constants.dart';
 import '../datatypes/onboard_model.dart';
-import 'home_page.dart';
 
 class OnBoard extends StatefulWidget {
+  const OnBoard({super.key});
+
   @override
-  _OnBoardState createState() => _OnBoardState();
+  State<OnBoard> createState() => _OnBoardState();
 }
 
 class _OnBoardState extends State<OnBoard> {
@@ -31,11 +32,11 @@ class _OnBoardState extends State<OnBoard> {
   }
 
   _storeOnboardInfo() async {
-    print("Shared pref called");
+    // print("Shared pref called");
     int isViewed = 0;
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setInt('onBoard', isViewed);
-    print(prefs.getInt('onBoard'));
+    // print(prefs.getInt('onBoard'));
   }
 
   Widget skipOnboardButton() {
@@ -63,8 +64,9 @@ class _OnBoardState extends State<OnBoard> {
 
   FloatingActionButton buildPrevButton() {
     return FloatingActionButton(
+      heroTag: "btn1",
       onPressed: () async {
-        print(currentIndex);
+        // print(currentIndex);
         if (currentIndex != 0) {
           _pageController.previousPage(
             duration: const Duration(milliseconds: 500),
@@ -72,16 +74,17 @@ class _OnBoardState extends State<OnBoard> {
           );
         }
       },
-      child: const Icon(Icons.arrow_left_rounded),
       backgroundColor: Colors.grey,
       mini: true,
+      child: const Icon(Icons.arrow_left_rounded),
     );
   }
 
   FloatingActionButton buildNextButton() {
     return FloatingActionButton(
+      heroTag: "btn2",
       onPressed: () async {
-        print(currentIndex);
+        // print(currentIndex);
         if (currentIndex == screens.length - 1) {
           await _storeOnboardInfo();
           jumpTo(const LoginPage(), context);
@@ -91,9 +94,9 @@ class _OnBoardState extends State<OnBoard> {
           curve: Curves.linear,
         );
       },
-      child: const Icon(Icons.arrow_right_rounded),
       backgroundColor: Colors.grey,
       mini: true,
+      child: const Icon(Icons.arrow_right_rounded),
     );
   }
 
@@ -119,7 +122,8 @@ class _OnBoardState extends State<OnBoard> {
             });
           },
           itemBuilder: (_, index) {
-            double xOffset = (index - currentIndex) * MediaQuery.of(context).size.width;
+            double xOffset =
+                (index - currentIndex) * MediaQuery.of(context).size.width;
             return Transform.translate(
               offset: Offset(xOffset, 0.0),
               child: Column(
@@ -158,11 +162,13 @@ class _OnBoardState extends State<OnBoard> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              margin: const EdgeInsets.symmetric(horizontal: 3.0),
+                              margin:
+                                  const EdgeInsets.symmetric(horizontal: 3.0),
                               width: currentIndex == index ? 25 : 8,
                               height: 8,
                               decoration: BoxDecoration(
-                                color: currentIndex == index ? kbrown : kbrown300,
+                                color:
+                                    currentIndex == index ? kbrown : kbrown300,
                                 borderRadius: BorderRadius.circular(10.0),
                               ),
                             ),

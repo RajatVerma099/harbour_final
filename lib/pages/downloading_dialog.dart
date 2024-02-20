@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
 class DownloadingDialog extends StatefulWidget {
-  const DownloadingDialog({Key? key}) : super(key: key);
+  const DownloadingDialog({super.key});
 
   @override
-  _DownloadingDialogState createState() => _DownloadingDialogState();
+  State<DownloadingDialog> createState() => _DownloadingDialogState();
 }
 
 class _DownloadingDialogState extends State<DownloadingDialog> {
@@ -29,7 +29,7 @@ class _DownloadingDialogState extends State<DownloadingDialog> {
           progress = recivedBytes / totalBytes;
         });
 
-        print(progress);
+        // print(progress);
       },
       deleteOnError: true,
     ).then((_) {

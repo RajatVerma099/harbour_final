@@ -12,7 +12,7 @@ import '../../firebase_auth_implementation/firebase_auth_services.dart';
 import '../widgets/form_container_widget.dart';
 
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage({super.key});
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -23,8 +23,8 @@ class _LoginPageState extends State<LoginPage> {
   bool _isSigning = false;
   final FirebaseAuthService _auth = FirebaseAuthService();
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-  TextEditingController _emailController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   void initState() {
@@ -32,11 +32,11 @@ class _LoginPageState extends State<LoginPage> {
     _videoPlayerController = VideoPlayerController.asset(
       'assets/launch/signin.mp4',
     )..initialize().then((_) {
-      setState(() {});
-      _videoPlayerController.play();
-      _videoPlayerController.setVolume(0.0);
-      _videoPlayerController.setLooping(true);
-    });
+        setState(() {});
+        _videoPlayerController.play();
+        _videoPlayerController.setVolume(0.0);
+        _videoPlayerController.setLooping(true);
+      });
   }
 
   @override
@@ -69,21 +69,23 @@ class _LoginPageState extends State<LoginPage> {
                     Positioned.fill(
                       child: _videoPlayerController.value.isInitialized
                           ? AspectRatio(
-                        aspectRatio: _videoPlayerController.value.aspectRatio,
-                        child: VideoPlayer(_videoPlayerController),
-                      )
+                              aspectRatio:
+                                  _videoPlayerController.value.aspectRatio,
+                              child: VideoPlayer(_videoPlayerController),
+                            )
                           : Container(),
                     ),
                     Container(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "Login",
-                            style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
+                            style: TextStyle(
+                                fontSize: 27, fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           FormContainerWidget(
@@ -115,18 +117,23 @@ class _LoginPageState extends State<LoginPage> {
                                 borderRadius: BorderRadius.circular(30),
                               ),
                               child: Center(
-                                child: _isSigning ? CircularProgressIndicator(
-                                  color: Colors.white,) : Text(
-                                  "Login",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
+                                child: _isSigning
+                                    ? const CircularProgressIndicator(
+                                        color: Colors.white,
+                                      )
+                                    : const Text(
+                                        "Login",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
                               ),
                             ),
                           ),
-                          SizedBox(height: 10,),
+                          const SizedBox(
+                            height: 10,
+                          ),
                           GestureDetector(
                             onTap: () {
                               _signInWithGoogle();
@@ -139,12 +146,17 @@ class _LoginPageState extends State<LoginPage> {
                                 color: Colors.red,
                                 borderRadius: BorderRadius.circular(30),
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Icon(FontAwesomeIcons.google, color: Colors.white,),
-                                    SizedBox(width: 5,),
+                                    Icon(
+                                      FontAwesomeIcons.google,
+                                      color: Colors.white,
+                                    ),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
                                     Text(
                                       "Sign in with Google",
                                       style: TextStyle(
@@ -157,25 +169,27 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Don't have an account?"),
-                              SizedBox(
+                              const Text("Don't have an account?"),
+                              const SizedBox(
                                 width: 5,
                               ),
                               GestureDetector(
                                 onTap: () {
                                   Navigator.pushAndRemoveUntil(
                                     context,
-                                    MaterialPageRoute(builder: (context) => SignUpPage()),
-                                        (route) => false,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            const SignUpPage()),
+                                    (route) => false,
                                   );
                                 },
-                                child: Text(
+                                child: const Text(
                                   "Sign Up",
                                   style: TextStyle(
                                     color: Colors.blue,
@@ -214,28 +228,33 @@ class _LoginPageState extends State<LoginPage> {
 
     if (user != null) {
       showToast(message: "We're taking you in");
-      goTo(MyHomePage(title: '',), context);
-      // Navigator.pushNamed(context, "/home");//"/home");
+      if (mounted) {
+        goTo(
+            const MyHomePage(
+              title: '',
+            ),
+            context);
+      } // Navigator.pushNamed(context, "/home");//"/home");
     } else {
       showToast(message: "some error occured");
     }
   }
 
   _signInWithGoogle() async {
-    final GoogleSignIn _googleSignIn = GoogleSignIn(
-      // clientId:
-    );
+    final GoogleSignIn googleSignIn = GoogleSignIn(
+        // clientId:
+        );
     // "308935094536-84ag5jk3r36pkch5r7bcbq56c1mpvr6k.apps.googleusercontent.com");
     // "1091454301447-9j9tlbl8qir77v62g5sjqmlhjmislghm.apps.googleusercontent.com");//old
     // "1091454301447-uqas381p5bguc2mb144117imjhvf0jni.apps.googleusercontent.com");
 
     try {
       final GoogleSignInAccount? googleSignInAccount =
-      await _googleSignIn.signIn();
+          await googleSignIn.signIn();
 
       if (googleSignInAccount != null) {
         final GoogleSignInAuthentication googleSignInAuthentication =
-        await googleSignInAccount.authentication;
+            await googleSignInAccount.authentication;
 
         final AuthCredential credential = GoogleAuthProvider.credential(
           idToken: googleSignInAuthentication.idToken,
@@ -243,13 +262,13 @@ class _LoginPageState extends State<LoginPage> {
         );
 
         await _firebaseAuth.signInWithCredential(credential);
-        var username = googleSignInAccount.displayName;
-        jumpTo(MyHomePage(title: "Welcome $username"), context);
+        var username = googleSignInAccount.displayName;if(mounted){
+        jumpTo(MyHomePage(title: "Welcome $username"), context);}
       }
     } catch (e) {
       showToast(message: "some error occurred $e");
-      print("======================================================");
-      print(e);
+      // print("======================================================");
+      // print(e);
     }
   }
 }

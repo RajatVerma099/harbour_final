@@ -10,14 +10,14 @@ class DevPage extends StatelessWidget {
   final dynamic connectionLinks;
   final String sendOffQuote;
   const DevPage({
-    Key? key,
+    super.key,
     required this.firstName,
     required this.lastName,
     this.avatarLink = '',
     this.lifeMotto = '',
     required this.connectionLinks,
     this.sendOffQuote = '',
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

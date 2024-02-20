@@ -24,7 +24,7 @@ class JobDetailsModal extends StatelessWidget {
   }
   
   Future<void> _onOpen(LinkableElement link) async {
-    print("Linking!!!");
+    // print("Linking!!!");
     if (!await launchUrl(Uri.parse(link.url))) {
       throw Exception('Could not launch ${link.url}');
     }
@@ -37,7 +37,7 @@ class JobDetailsModal extends StatelessWidget {
       child: ListView(
           // crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(company,style: TextStyle(fontSize: 30, color: Colors.blueGrey),),
+            Text(company,style: const TextStyle(fontSize: 30, color: Colors.blueGrey),),
 
             const SizedBox(height: 20),
 

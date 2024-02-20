@@ -5,10 +5,10 @@ import 'resume_maker_websites_page.dart';
 import '../tools/link_tools.dart';
 
 class Resume extends StatefulWidget {
-  const Resume({Key? key}) : super(key: key);
+  const Resume({super.key});
 
   @override
-  _ResumeState createState() => _ResumeState();
+  State<Resume> createState() => _ResumeState();
 }
 
 class _ResumeState extends State<Resume> {
@@ -63,6 +63,7 @@ class _ResumeState extends State<Resume> {
             },
           ),
           FloatingActionButton.extended(
+            heroTag: "btn3",
             onPressed: () => launchURL(pdfFileUrls[_currentIndex]),
             label: const Row(
               children: [
@@ -94,6 +95,7 @@ class _ResumeState extends State<Resume> {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
+        heroTag: "btn4",
         onPressed: () {
           // Navigate to the next page with custom page transition
           Navigator.push(

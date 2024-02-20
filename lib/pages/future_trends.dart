@@ -1,14 +1,13 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class CodeNScope extends StatefulWidget {
-  const CodeNScope({Key? key}) : super(key: key);
+  const CodeNScope({super.key});
 
   @override
-  _CodeNScopeState createState() => _CodeNScopeState();
+  State<CodeNScope> createState() => _CodeNScopeState();
 }
 
 class _CodeNScopeState extends State<CodeNScope> {
@@ -100,8 +99,8 @@ class _CodeNScopeState extends State<CodeNScope> {
   }
 
   void _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+    if (await canLaunchUrlString(url)) {
+      await launchUrlString(url);
     } else {
       throw 'Could not launch $url';
     }
@@ -112,7 +111,7 @@ class TechnologyCard extends StatelessWidget {
   final Technology technology;
   final VoidCallback onTap;
 
-  const TechnologyCard({
+  const TechnologyCard({super.key, 
     required this.technology,
     required this.onTap,
   });
@@ -136,7 +135,7 @@ class TechnologyCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width * 0.7,
                 height: MediaQuery.of(context).size.height * 0.1,
                 child: Image.network(
@@ -165,7 +164,7 @@ class CodingWebsiteCard extends StatelessWidget {
   final CodingWebsite website;
   final VoidCallback onTap;
 
-  const CodingWebsiteCard({
+  const CodingWebsiteCard({super.key, 
     required this.website,
     required this.onTap,
   });
@@ -189,7 +188,7 @@ class CodingWebsiteCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
                 width: MediaQuery.of(context).size.width * 0.7,
                 height: MediaQuery.of(context).size.height * 0.1,
                 child: Image.network(
@@ -218,7 +217,7 @@ class PageIndicator extends StatelessWidget {
   final int currentIndex;
   final int totalPages;
 
-  const PageIndicator({required this.currentIndex, required this.totalPages});
+  const PageIndicator({super.key, required this.currentIndex, required this.totalPages});
 
   @override
   Widget build(BuildContext context) {
@@ -363,7 +362,7 @@ final List<CodingWebsite> codingWebsites = [
 ];
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: CodeNScope(),
   ));
 }

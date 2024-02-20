@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:harbour/tools/link_tools.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:harbour/tools/navigation.dart';
-import '../pages/TechnologiesPage.dart';
+import 'package:url_launcher/url_launcher_string.dart';
+import '../pages/technologies_page.dart';
 import '../pages/dev_page.dart';
 import '../pages/support_us.dart';
 
 class MainDrawer extends StatelessWidget {
   final padding = const EdgeInsets.symmetric(horizontal: 20);
 
-  const MainDrawer({Key? key}) : super(key: key);
+  const MainDrawer({super.key});
 
   Widget intro() {
     return Card(
@@ -130,8 +132,7 @@ class MainDrawer extends StatelessWidget {
             lifeMotto: 'Life is a virtual mess we weave',
             connectionLinks: {
               'email': 'lostpoet099@gmail.com',
-              'linkedin':
-              'https://www.linkedin.com/in/rajat-verma-321336224/',
+              'linkedin': 'https://www.linkedin.com/in/rajat-verma-321336224/',
               'github': 'https://github.com/RajatVerma099',
             },
             sendOffQuote: 'Feel free to connect :)',
@@ -152,7 +153,7 @@ class MainDrawer extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const BuyUsACoffee()));
         },
         style: ElevatedButton.styleFrom(
-          primary: Colors.grey[900],
+          backgroundColor: Colors.grey[900],
         ),
         child: const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
@@ -176,11 +177,11 @@ class MainDrawer extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 10),
       child: ElevatedButton(
         onPressed: () {
-          Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const TechnologiesPage()));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const TechnologiesPage()));
         },
         style: ElevatedButton.styleFrom(
-          primary: Colors.grey[900],
+          backgroundColor: Colors.grey[900],
         ),
         child: const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
@@ -206,8 +207,8 @@ class MainDrawer extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 10),
       child: ElevatedButton(
         onPressed: () async {
-          if (await canLaunch(updatesUrl)) {
-            await launch(updatesUrl);
+          if (await canLaunchUrl(Uri(path: updatesUrl))) {
+            await launchURL(updatesUrl);
           } else {
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
@@ -217,7 +218,7 @@ class MainDrawer extends StatelessWidget {
           }
         },
         style: ElevatedButton.styleFrom(
-          primary: Colors.grey[900],
+          backgroundColor: Colors.grey[900],
         ),
         child: const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
@@ -243,18 +244,20 @@ class MainDrawer extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 10),
       child: ElevatedButton(
         onPressed: () async {
-          if (await canLaunch(feedbackUrl)) {
-            await launch(feedbackUrl);
+          if (await canLaunchUrlString(feedbackUrl)) {
+            await launchUrlString(feedbackUrl);
           } else {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text('Could not launch the feedback URL.'),
-              ),
-            );
+            
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Could not launch the feedback URL.'),
+                ),
+              );
+            
           }
         },
         style: ElevatedButton.styleFrom(
-          primary: Colors.grey[900],
+          backgroundColor: Colors.grey[900],
         ),
         child: const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),

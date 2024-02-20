@@ -1,18 +1,17 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 
-class coding_platforms extends StatefulWidget {
-  const coding_platforms({Key? key}) : super(key: key);
+class CodingPlatforms extends StatefulWidget {
+  const CodingPlatforms({super.key});
 
   @override
   _TechnologiesPageState createState() => _TechnologiesPageState();
 }
 
-class _TechnologiesPageState extends State<coding_platforms> {
+class _TechnologiesPageState extends State<CodingPlatforms> {
   int _currentIndex = 0;
 
   @override
@@ -44,8 +43,8 @@ class _TechnologiesPageState extends State<coding_platforms> {
   }
 
   void _launchWebsite(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+    if (await canLaunchUrlString(url)) {
+      await launchUrlString(url);
     } else {
       throw 'Could not launch $url';
     }
@@ -56,11 +55,10 @@ class TechnologiesList extends StatefulWidget {
   final ValueChanged<int> onIndexChanged;
   final ValueChanged<int> onCardTapped;
 
-  const TechnologiesList({Key? key, required this.onIndexChanged, required this.onCardTapped})
-      : super(key: key);
+  const TechnologiesList({super.key, required this.onIndexChanged, required this.onCardTapped});
 
   @override
-  _TechnologiesListState createState() => _TechnologiesListState();
+  State<TechnologiesList> createState() => _TechnologiesListState();
 }
 
 class _TechnologiesListState extends State<TechnologiesList> {
@@ -98,7 +96,7 @@ class _TechnologiesListState extends State<TechnologiesList> {
 class TechnologyCard extends StatelessWidget {
   final Technology technology;
 
-  const TechnologyCard({
+  const TechnologyCard({super.key, 
     required this.technology,
   });
 
@@ -121,7 +119,7 @@ class TechnologyCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width * 0.7,
               height: MediaQuery.of(context).size.height * 0.1,
               child: Image.network(
@@ -148,7 +146,7 @@ class TechnologyCard extends StatelessWidget {
 class PageIndicator extends StatelessWidget {
   final int currentIndex;
 
-  const PageIndicator({required this.currentIndex});
+  const PageIndicator({super.key, required this.currentIndex});
 
   @override
   Widget build(BuildContext context) {

@@ -3,11 +3,11 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 void main() {
-  runApp(GetJobReady());
+  runApp(const GetJobReady());
 }
 
 class GetJobReady extends StatelessWidget {
-  const GetJobReady({Key? key});
+  const GetJobReady({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -194,14 +194,14 @@ class MyHomePage extends StatelessWidget {
 
   ];
 
-  MyHomePage({Key? key}) : super(key: key);
+  MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Text('Get Job Ready', style: TextStyle(fontSize: 20)),
+        title: const Text('Get Job Ready', style: TextStyle(fontSize: 20)),
         centerTitle: true,
       ),
       body: Stack(
@@ -245,7 +245,7 @@ class VerticalCarousel extends StatelessWidget {
   final String mainTitle;
   final List<VideoInfo> videoData;
 
-  VerticalCarousel({
+  const VerticalCarousel({super.key, 
     required this.mainTitle,
     required this.videoData,
   });
@@ -261,7 +261,7 @@ class VerticalCarousel extends StatelessWidget {
             fontSize: 20.0,
           ),
         ),
-        SizedBox(height: 8.0),
+        const SizedBox(height: 8.0),
         CarouselSlider.builder(
           itemCount: videoData.length,
           options: CarouselOptions(
@@ -286,7 +286,7 @@ class VerticalCarousel extends StatelessWidget {
 class VideoCard extends StatelessWidget {
   final VideoInfo videoInfo;
 
-  const VideoCard({
+  const VideoCard({super.key, 
     required this.videoInfo,
   });
 
@@ -299,39 +299,37 @@ class VideoCard extends StatelessWidget {
         mute: false,
       ),
     );
-    return Container(
-      child: SingleChildScrollView(
-        child: Column(
-          children: [
-            YoutubePlayer(
-              controller: controller,
-              showVideoProgressIndicator: true,
-              progressIndicatorColor: Colors.blueAccent,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    videoInfo.title,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18.0,
-                    ),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          YoutubePlayer(
+            controller: controller,
+            showVideoProgressIndicator: true,
+            progressIndicatorColor: Colors.blueAccent,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  videoInfo.title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
                   ),
-                  SizedBox(height: 4.0),
-                  Text(
-                    videoInfo.subtitle,
-                    style: const TextStyle(fontSize: 14.0),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 2,
-                  ),
-                ],
-              ),
+                ),
+                const SizedBox(height: 4.0),
+                Text(
+                  videoInfo.subtitle,
+                  style: const TextStyle(fontSize: 14.0),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:harbour/firebase/firebase_options.dart';
-import 'package:harbour/pages/GetJobReady.dart';
 import 'package:harbour/pages/features/user_auth/presentation/pages/login_page.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -14,10 +13,12 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform
   );
   OneSignal.initialize("56c94a7a-618b-41d6-8db3-955968baf359");
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         splashTransition: SplashTransition.scaleTransition,
         backgroundColor: Colors.black,
         duration: 2000,
-        nextScreen: MyAppScreen(),
+        nextScreen: const MyAppScreen(),
       ),
       // routes: {
       //   '/home': (context) => MyHomePage(),
@@ -46,8 +47,10 @@ class MyApp extends StatelessWidget {
 }
 
 class MyAppScreen extends StatefulWidget {
+  const MyAppScreen({super.key});
+
   @override
-  _MyAppScreenState createState() => _MyAppScreenState();
+  State<MyAppScreen> createState() => _MyAppScreenState();
 }
 
 class _MyAppScreenState extends State<MyAppScreen> {
@@ -71,7 +74,7 @@ class _MyAppScreenState extends State<MyAppScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Harbour',
-      home: isViewed != 0 ? OnBoard() : const LoginPage(),
+      home: isViewed != 0 ? const OnBoard() : const LoginPage(),
     );
   }
 }
