@@ -164,36 +164,36 @@ class _ShowDataState extends State<ShowData> {
                             ),
                             title: Text("${jobDocument["title"]}"),
                             subtitle: Text("${jobDocument["company"]}"),
-                            trailing: IconButton(
-                              icon: Icon(Icons.delete),
-                              onPressed: () {
-                                showDialog(
-                                  context: context,
-                                  builder: (BuildContext context) {
-                                    return AlertDialog(
-                                      title: Text("Confirm"),
-                                      content: Text(
-                                          "Are you sure you want to delete this job?"),
-                                      actions: [
-                                        TextButton(
-                                          onPressed: () {
-                                            Navigator.of(context).pop();
-                                          },
-                                          child: Text("Cancel"),
-                                        ),
-                                        TextButton(
-                                          onPressed: () {
-                                            deleteJob(jobDocument.id);
-                                            Navigator.of(context).pop();
-                                          },
-                                          child: Text("Delete"),
-                                        ),
-                                      ],
-                                    );
-                                  },
-                                );
-                              },
-                            ),
+                            // trailing: IconButton(
+                            //   icon: Icon(Icons.delete),
+                            //   onPressed: () {
+                            //     showDialog(
+                            //       context: context,
+                            //       builder: (BuildContext context) {
+                            //         return AlertDialog(
+                            //           title: Text("Confirm"),
+                            //           content: Text(
+                            //               "Are you sure you want to delete this job?"),
+                            //           actions: [
+                            //             TextButton(
+                            //               onPressed: () {
+                            //                 Navigator.of(context).pop();
+                            //               },
+                            //               child: Text("Cancel"),
+                            //             ),
+                            //             TextButton(
+                            //               onPressed: () {
+                            //                 deleteJob(jobDocument.id);
+                            //                 Navigator.of(context).pop();
+                            //               },
+                            //               child: Text("Delete"),
+                            //             ),
+                            //           ],
+                            //         );
+                            //       },
+                            //     );
+                            //   },
+                            // ),
                           ),
                         );
                       },
@@ -210,15 +210,15 @@ class _ShowDataState extends State<ShowData> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => JobModal()),
-          );
-        },
-        child: Icon(Icons.add),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     Navigator.push(
+      //       context,
+      //       MaterialPageRoute(builder: (context) => JobModal()),
+      //     );
+      //   },
+      //   child: Icon(Icons.add),
+      // ),
     );
   }
 }
